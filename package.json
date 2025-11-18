@@ -16,9 +16,9 @@
 
     "build:client": "vite build",
 
-    "build:server": "esbuild server/index.ts --bundle --platform=node --format=esm --outfile=dist/server/index.js",
+    "build:server": "tsc -p server/tsconfig.json",
 
-    "start": "NODE_ENV=production node dist/server/index.js"
+    "start": "NODE_ENV=production node dist/server/index.js
   },
 
   "dependencies": {
